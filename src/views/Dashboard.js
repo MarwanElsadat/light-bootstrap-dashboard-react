@@ -82,9 +82,7 @@ function Dashboard() {
             <Card className="strpied-tabled-with-hover">
               <Card.Header>
                 <Card.Title as="h4">Incoming Requests</Card.Title>
-                <p className="card-category">
-                  Here is a subtitle for this table
-                </p>
+                <p className="card-category">Requests</p>
               </Card.Header>
               <Card.Body className="table-full-width table-responsive px-0">
                 <Table className="table-hover table-striped">
@@ -92,9 +90,11 @@ function Dashboard() {
                     <tr>
                       <th className="border-0">ID</th>
                       <th className="border-0">Name</th>
-                      <th className="border-0">Salary</th>
-                      <th className="border-0">Country</th>
-                      <th className="border-0">City</th>
+                      <th className="border-0">Mine?</th>
+                      <th className="border-0">Treatment Country</th>
+                      <th className="border-0">Number</th>
+                      <th className="border-0">Phone Call</th>
+                      <th className="border-0">Medical Field</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -104,6 +104,8 @@ function Dashboard() {
                       <td>$36,738</td>
                       <td>Niger</td>
                       <td>Oud-Turnhout</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                     <tr>
                       <td>2</td>
@@ -111,6 +113,8 @@ function Dashboard() {
                       <td>$23,789</td>
                       <td>Curaçao</td>
                       <td>Sinaai-Waas</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                     <tr>
                       <td>3</td>
@@ -118,6 +122,8 @@ function Dashboard() {
                       <td>$56,142</td>
                       <td>Netherlands</td>
                       <td>Baileux</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                     <tr>
                       <td>4</td>
@@ -125,6 +131,8 @@ function Dashboard() {
                       <td>$38,735</td>
                       <td>Korea, South</td>
                       <td>Overland Park</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                     <tr>
                       <td>5</td>
@@ -132,6 +140,8 @@ function Dashboard() {
                       <td>$63,542</td>
                       <td>Malawi</td>
                       <td>Feldkirchen in Kärnten</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                     <tr>
                       <td>6</td>
@@ -139,6 +149,8 @@ function Dashboard() {
                       <td>$78,615</td>
                       <td>Chile</td>
                       <td>Gloucester</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                   </tbody>
                 </Table>
@@ -457,23 +469,161 @@ function Dashboard() {
                                   require("assets/img/faces/face-3.jpg").default
                                 }
                               ></img>
-                              <h4 className="title">Name</h4>
-                              <h5 className="title">FirstName LastName</h5>
                             </a>
-                            <h6 className="description">Email</h6>
-                            <p className="description">123@123.com</p>
-                            <h6 className="description">Phone Number</h6>
-                            <p className="description">0123456789</p>
-                            <h6 className="description">Address</h6>
-                            <p className="description">new york, usa</p>
-                            <h6 className="description">michael24</h6>
-                            <p className="description">michael24</p>
                           </div>
-                          <p className="description text-center">
-                            "Lamborghini Mercy <br></br>
-                            Your chick she so thirsty <br></br>
-                            I'm in that two seat Lambo"
-                          </p>
+
+                          <Form>
+                            <Row>
+                              <Col className="px-1" md="12">
+                                <Form.Group>
+                                  <label>User ID</label>
+                                  <Form.Control
+                                    defaultValue="michael23"
+                                    placeholder="Username"
+                                    type="text"
+                                    disabled
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col className="pr-1" md="6">
+                                <Form.Group>
+                                  <label>First Name</label>
+                                  <Form.Control
+                                    defaultValue="Mike"
+                                    placeholder="First Name"
+                                    type="text"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                              <Col className="pl-1" md="6">
+                                <Form.Group>
+                                  <label>Last Name</label>
+                                  <Form.Control
+                                    defaultValue="Andrew"
+                                    placeholder="Last Name"
+                                    type="text"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col className="pl-1" md="12">
+                                <Form.Group>
+                                  <label htmlFor="exampleInputEmail1">
+                                    Email address
+                                  </label>
+                                  <Form.Control
+                                    placeholder="Email"
+                                    type="email"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col className="pl-1" md="12">
+                                <Form.Group>
+                                  <label>Password</label>
+                                  <Form.Control
+                                    placeholder="Passowrd"
+                                    type="text"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                            </Row>
+
+                            <Row>
+                              <Col className="pl-1" md="6">
+                                <Form.Group>
+                                  <label>Country</label>
+                                  <Form.Control
+                                    defaultValue="UAE"
+                                    placeholder="Country"
+                                    type="text"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                              <Col className="pl-1" md="6">
+                                <Form.Group>
+                                  <label>Inusrance Number</label>
+                                  <Form.Control
+                                    defaultValue="987654321"
+                                    placeholder="Inusrance Number"
+                                    type="text"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col className="pl-1" md="6">
+                                <Form.Group>
+                                  <label>National ID</label>
+                                  <Form.Control
+                                    defaultValue="987654321"
+                                    placeholder="National ID"
+                                    type="text"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                              <Col className="pl-1" md="6">
+                                <Form.Group>
+                                  <label>Phone Number</label>
+                                  <Form.Control
+                                    defaultValue="987654321"
+                                    placeholder="Phone Number"
+                                    type="text"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col className="pl-1" md="12">
+                                <Form.Group>
+                                  <label>Address</label>
+                                  <Form.Control
+                                    defaultValue="NY, USA"
+                                    placeholder="Address"
+                                    type="text"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col className="pl-1" md="6">
+                                <Form.Group>
+                                  <label>Height</label>
+                                  <Form.Control
+                                    defaultValue="175"
+                                    placeholder="Height"
+                                    type="text"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                              <Col className="pl-1" md="6">
+                                <Form.Group>
+                                  <label>Weight</label>
+                                  <Form.Control
+                                    defaultValue="75"
+                                    placeholder="Weight"
+                                    type="text"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col className="pl-1" md="12">
+                                <Form.Group>
+                                  <label>Created at</label>
+                                  <Form.Control
+                                    defaultValue="01/01/2022 01:01:01"
+                                    placeholder="Date"
+                                    type="text"
+                                  ></Form.Control>
+                                </Form.Group>
+                              </Col>
+                            </Row>
+                          </Form>
                         </Card.Body>
                         <hr></hr>
                       </Card>

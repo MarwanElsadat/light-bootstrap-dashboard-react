@@ -79,9 +79,7 @@ function Typography() {
             <Card className="strpied-tabled-with-hover">
               <Card.Header>
                 <Card.Title as="h4">Finished Requests</Card.Title>
-                <p className="card-category">
-                  Here is a subtitle for this table
-                </p>
+                <p className="card-category">Requests</p>
               </Card.Header>
               <Card.Body className="table-full-width table-responsive px-0">
                 <Table className="table-hover table-striped">
@@ -89,9 +87,11 @@ function Typography() {
                     <tr>
                       <th className="border-0">ID</th>
                       <th className="border-0">Name</th>
-                      <th className="border-0">Salary</th>
-                      <th className="border-0">Country</th>
-                      <th className="border-0">City</th>
+                      <th className="border-0">Mine?</th>
+                      <th className="border-0">Treatment Country</th>
+                      <th className="border-0">Number</th>
+                      <th className="border-0">Phone Call</th>
+                      <th className="border-0">Medical Field</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -101,6 +101,8 @@ function Typography() {
                       <td>$36,738</td>
                       <td>Niger</td>
                       <td>Oud-Turnhout</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                     <tr>
                       <td>2</td>
@@ -108,6 +110,8 @@ function Typography() {
                       <td>$23,789</td>
                       <td>Curaçao</td>
                       <td>Sinaai-Waas</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                     <tr>
                       <td>3</td>
@@ -115,6 +119,8 @@ function Typography() {
                       <td>$56,142</td>
                       <td>Netherlands</td>
                       <td>Baileux</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                     <tr>
                       <td>4</td>
@@ -122,6 +128,8 @@ function Typography() {
                       <td>$38,735</td>
                       <td>Korea, South</td>
                       <td>Overland Park</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                     <tr>
                       <td>5</td>
@@ -129,6 +137,8 @@ function Typography() {
                       <td>$63,542</td>
                       <td>Malawi</td>
                       <td>Feldkirchen in Kärnten</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                     <tr>
                       <td>6</td>
@@ -136,6 +146,8 @@ function Typography() {
                       <td>$78,615</td>
                       <td>Chile</td>
                       <td>Gloucester</td>
+                      <td>Oud</td>
+                      <td>Oud-Turnhout</td>
                     </tr>
                   </tbody>
                 </Table>
