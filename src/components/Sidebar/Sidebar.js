@@ -32,7 +32,7 @@ function Sidebar({ color, image, routes }) {
       <div
         className="sidebar-background"
         style={{
-          backgroundImage: "url(" + image + ")",
+          backgroundImage: "url(assets/img/sidebar-background.jpg)",
         }}
       />
       <div className="sidebar-wrapper">
@@ -42,14 +42,14 @@ function Sidebar({ color, image, routes }) {
             className="simple-text logo-mini mx-1"
           >
             <div className="logo-img">
-              <img
+              {/* <img
                 src={require("assets/img/reactlogo.png").default}
                 alt="..."
-              />
+              /> */}
             </div>
           </a>
           <a className="simple-text" href="http://www.creative-tim.com">
-            Creative Tim
+            Altabyb
           </a>
         </div>
         <Nav>
